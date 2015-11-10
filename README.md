@@ -11,7 +11,7 @@ Extensions de test2 pour EDD
 
 ## Description ##
 
-Test2 est une extension de test pour EDD [EDD](https://fxbenard.com/recommande/easydigitaldownloads/).
+Test2 est une extension de test pour [EDD](https://fxbenard.com/recommande/easydigitaldownloads/).
 
 
 ## Support ##
