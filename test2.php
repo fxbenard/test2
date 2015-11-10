@@ -283,7 +283,7 @@ function test_2_check_license() {
 	);
 
 	// Call the custom API.
-	$response = wp_remote_get( add_query_arg( $api_params, TEST_2_STORE_URL ), array(
+	$response = wp_remote_post( add_query_arg( $api_params, TEST_2_STORE_URL ), array(
 		'timeout'   => 15,
 		'sslverify' => false,
 		'body'      => $api_params,
