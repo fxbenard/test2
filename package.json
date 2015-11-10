@@ -1,0 +1,63 @@
+{
+  "name": "test2",
+  "version": "2.0.0",
+  "description": "EDD Test2",
+  "homepage": "https://fxbenard.com/",
+  "author": {
+    "name": "FX Bénard",
+    "email": "fx@fxbenard.com",
+    "url": "https://fxbenard.com/"
+  },
+  "contributors": "FX Bénard <fx@fxbenard.com> ",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "bugs": {
+    "url": "https://fxbenard.com/contactez-moi",
+    "email": "fx@fxbenard.com"
+  },
+  "license": "GPLv2+",
+  "private": true,
+  "directories": {
+    "js": "",
+    "sass": "",
+    "css": "",
+    "build": "./build",
+    "languages": "./languages"
+  },
+  "pot": {
+    "type": "wp-plugin",
+    "textdomain": "test2",
+    "tdsource": "et_builder",
+    "src": "test2.php",
+    "header": {
+      "bugs": "https://fxbenard.com/",
+      "team": "fxbenard <fx@fxbenard.com>",
+      "last_translator": "fxbenard <fx@fxbenard.com>"
+    }
+  },
+  "constant": {
+    "ver": "TEST_2_VER",
+    "dir": "TEST_2_DIR",
+    "url": "TEST_2_URL",
+    "cst": "T2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-checktextdomain": "~1.0.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.8.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-exec": "~0.4.5",
+    "grunt-newer": "^1.1.0",
+    "grunt-notify": "^0.4.1",
+    "grunt-phpcs": "^0.4.0",
+    "grunt-potomo": "~3.2.0",
+    "grunt-text-replace": "^0.4.0",
+    "grunt-wp-i18n": "~0.5.2",
+    "grunt-wp-readme-to-markdown": "^0.9.0",
+    "load-grunt-config": "0.16.0",
+    "load-grunt-tasks": "~0.3.0"
+  }
+}

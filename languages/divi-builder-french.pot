@@ -1,0 +1,97 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Divi Builder French\n"
+"POT-Creation-Date: 2015-10-22 11:35+0200\n"
+"PO-Revision-Date: 2015-10-22 11:31+0200\n"
+"Last-Translator: fxbenard | FxB <fx@fxbenard.com>\n"
+"Language-Team: fxbenard | FxB <fx@fxbenard.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: divi-builder-french.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: divi-builder-french.php:159
+msgid "Divi Builder French License"
+msgstr ""
+
+#: divi-builder-french.php:168
+msgid "Divi Builder French License Options"
+msgstr ""
+
+#: divi-builder-french.php:177
+msgid "License Key"
+msgstr ""
+
+#: divi-builder-french.php:181
+msgid "Enter your license key"
+msgstr ""
+
+#: divi-builder-french.php:187 divi-builder-french.php:196
+msgid "Activate License"
+msgstr ""
+
+#: divi-builder-french.php:191
+msgid "active"
+msgstr ""
+
+#: divi-builder-french.php:193
+msgid "Deactivate License"
+msgstr ""
+
+#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+
+#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+
+#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:324
+msgid "Error"
+msgstr ""
+
+#: includes/strings.php:15
+msgid "A drag and drop page builder for any WordPress theme."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Divi Builder French"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://fxbenard.com/downloads/divi-builder-french"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "French Translations for Divi Builder"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "FX Bénard"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://fxbenard.com"
+msgstr ""
