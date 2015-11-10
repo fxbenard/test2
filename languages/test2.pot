@@ -1,82 +1,77 @@
 # Copyright (C) 2015 FX Bénard
 # This file is distributed under the same license as the Divi Builder French package.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Divi Builder French 2.0.0\n"
 "Report-Msgid-Bugs-To: https://fxbenard.com/\n"
-"POT-Creation-Date: 2015-11-10 08:09:41+00:00\n"
+"POT-Creation-Date: 2015-11-10 11:20+0100\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: fxbenard <fx@fxbenard.com>\n"
 "Language-Team: fxbenard <fx@fxbenard.com>\n"
-"X-Generator: grunt-wp-i18n 0.5.3\n"
-"X-Poedit-KeywordsList: "
-"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
-"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;"
+"_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;"
+"esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-Country: United States\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ../\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-Bookmarks: \n"
+"X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: grunt\n"
 
-#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:177
+#: includes/TEST_2_Plugin_Updater.php:177
+#, php-format
 msgid ""
-"There is a new version of %1$s available. <a target=\"_blank\" "
-"class=\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
 msgstr ""
 
-#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:184
+#: includes/TEST_2_Plugin_Updater.php:184
+#, php-format
 msgid ""
-"There is a new version of %1$s available. <a target=\"_blank\" "
-"class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a "
-"href=\"%4$s\">update now</a>."
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href="
+"\"%4$s\">update now</a>."
 msgstr ""
 
-#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:324
+#: includes/TEST_2_Plugin_Updater.php:324
 msgid "You do not have permission to install plugin updates"
 msgstr ""
 
-#: includes/DIVI_BUILDER_FRENCH_Plugin_Updater.php:324
+#: includes/TEST_2_Plugin_Updater.php:324
 msgid "Error"
 msgstr ""
 
-#: includes/strings.php:15
-msgid "A drag and drop page builder for any WordPress theme."
-msgstr ""
-
-#: test2.php:185
+#: test2.php:80
 msgid "FX Trads"
 msgstr ""
 
-#: test2.php:195
+#: test2.php:90
 msgid "FX Trads License Options"
 msgstr ""
 
-#: test2.php:216
+#: test2.php:111
 msgid "License Key for"
 msgstr ""
 
-#: test2.php:223
+#: test2.php:118
 msgid "Enter your license key"
 msgstr ""
 
-#: test2.php:229 test2.php:240
+#: test2.php:124 test2.php:135
 msgid "Activate License"
 msgstr ""
 
-#: test2.php:233
+#: test2.php:128
 msgid "active"
 msgstr ""
 
-#: test2.php:236
+#: test2.php:131
 msgid "Deactivate License"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid "EDD Test2"
 msgstr ""
