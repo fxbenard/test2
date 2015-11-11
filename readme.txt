@@ -13,12 +13,10 @@ Extensions de test2 pour EDD
 
 Test2 est une extension de test pour EDD [EDD](https://fxbenard.com/recommande/easydigitaldownloads/).
 
-
 == Support ==
 
 Pour toutes suggestions, améliorations ou demandes de corrections, n'hésitez pas à utiliser [ma page de contact](https://fxbenard.com/contact/).
 Ou directement par e-mail : fx@fxbenard.com.
-
 
 == Installation ==
 
@@ -27,7 +25,6 @@ Direction Extension > Ajouter > Mettre une extension en ligne > Selectionner le 
 
 = Installation manuelle =
 Extraire le fichier zip et déposez-le dans votre dossier wp-content/plugins/ de votre installation WordPress et activez-le depuis votre page extension.
-
 
 == Changelog ==
 
