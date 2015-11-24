@@ -205,6 +205,10 @@ function test_2_activate_license() {
 
 		update_option( 'test_2_license_status', $license_data->license );
 
+		delete_transient( 'test_2_license_check' );
+		if( 'valid' !== $license_data->license ) {
+			wp_die( sprintf( __( 'Your license key could not be activated. Error: %s', 'rcp' ), $license_data->error ), __( 'Error', 'rcp' ), array( 'response' => 401, 'back_link' => true ) );
+		}
 	}
 }
 
@@ -305,3 +309,59 @@ function test_2_check_license() {
 		// this license is no longer valid
 	}
 }
+add_action( 'admin_init', 'test_2_check_license' );
+
+
+// Admin notices for errors
+
+function test_2_license_notices() {
+
+	if ( isset( $_POST['test_2_license_notices'] ) ) {
+		return;
+	}
+
+			$license_error = get_transient( 'test_2_license_error' );
+
+	if ( false === $license_error ) {
+		return;
+	}
+
+	if ( ! empty( $license_error->error ) ) {
+
+		switch ( $license_error->error ) {
+
+			case 'item_name_mismatch' :
+
+				$message = __( 'This license does not belong to the product you have entered it for.', 'easy-digital-downloads' );
+				break;
+
+			case 'no_activations_left' :
+
+				$message = __( 'This license does not have any activations left', 'easy-digital-downloads' );
+				break;
+
+			case 'expired' :
+
+				$message = __( 'This license key is expired. Please renew it.', 'easy-digital-downloads' );
+				break;
+
+			default :
+
+				$message = sprintf( __( 'There was a problem activating your license key, please try again or contact support. Error code: %s', 'easy-digital-downloads' ), $license_error->error );
+				break;
+
+		}
+	}
+
+	if ( ! empty( $message ) ) {
+
+		echo '<div class="error">';
+		echo '<p>' . $message . '</p>';
+		echo '</div>';
+
+	}
+
+			delete_transient( 'test_2_license_error' );
+
+}
+add_action( 'admin_init', 'test_2_license_notices' );
