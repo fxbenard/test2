@@ -1,77 +1,112 @@
-# Copyright (C) 2015 FX Bénard
-# This file is distributed under the same license as the Divi Builder French package.
-#, fuzzy
+# Copyright (C) 2016 FX Bénard
+# This file is distributed under the same license as the EDD Test2 package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Divi Builder French 2.0.0\n"
+"Project-Id-Version: EDD Test2 1.2.2\n"
 "Report-Msgid-Bugs-To: https://fxbenard.com/\n"
-"POT-Creation-Date: 2015-11-10 11:20+0100\n"
+"POT-Creation-Date: 2016-01-05 14:18:27+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: fxbenard <fx@fxbenard.com>\n"
 "Language-Team: fxbenard <fx@fxbenard.com>\n"
-"X-Generator: Poedit 1.8.6\n"
-"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;"
-"_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;"
-"esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
 "Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-Basepath: ..\n"
-"X-Textdomain-Support: yes\n"
+"X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: node_modules\n"
-"X-Poedit-SearchPathExcluded-1: grunt\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
 
-#: includes/TEST_2_Plugin_Updater.php:177
-#, php-format
-msgid ""
-"There is a new version of %1$s available. <a target=\"_blank\" class="
-"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#: inc/admin/enqueue.php:12
+msgid "License deactivate"
 msgstr ""
 
-#: includes/TEST_2_Plugin_Updater.php:184
-#, php-format
-msgid ""
-"There is a new version of %1$s available. <a target=\"_blank\" class="
-"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href="
-"\"%4$s\">update now</a>."
-msgstr ""
-
-#: includes/TEST_2_Plugin_Updater.php:324
-msgid "You do not have permission to install plugin updates"
-msgstr ""
-
-#: includes/TEST_2_Plugin_Updater.php:324
-msgid "Error"
-msgstr ""
-
-#: test2.php:80
-msgid "FX Trads"
-msgstr ""
-
-#: test2.php:90
+#: inc/admin/options.php:11
 msgid "FX Trads License Options"
 msgstr ""
 
-#: test2.php:111
-msgid "License Key for"
+#: inc/admin/options.php:11
+msgid "FX Trads"
 msgstr ""
 
-#: test2.php:118
+#: inc/admin/options.php:26
+msgid "Test-1"
+msgstr ""
+
+#: inc/admin/options.php:43
 msgid "Enter your license key"
 msgstr ""
 
-#: test2.php:124 test2.php:135
+#: inc/admin/ui/actions.php:11
 msgid "Activate License"
 msgstr ""
 
-#: test2.php:128
-msgid "active"
+#: inc/admin/ui/actions.php:27
+msgid "License active"
 msgstr ""
 
-#: test2.php:131
+#: inc/admin/ui/actions.php:28
+msgid "Expires in"
+msgstr ""
+
+#: inc/admin/ui/actions.php:28
+msgid "days"
+msgstr ""
+
+#: inc/admin/ui/actions.php:29
 msgid "Deactivate License"
+msgstr ""
+
+#: inc/admin/ui/notices.php:20 inc/admin/ui/notices.php:65
+msgid "This license does not belong to the product you have entered it for."
+msgstr ""
+
+#: inc/admin/ui/notices.php:25 inc/admin/ui/notices.php:69
+msgid "This license does not have any activations left"
+msgstr ""
+
+#: inc/admin/ui/notices.php:30 inc/admin/ui/notices.php:73
+msgid "This license key is expired. Please renew it."
+msgstr ""
+
+#: inc/admin/ui/notices.php:35 inc/admin/ui/notices.php:77
+msgid ""
+"There was a problem activating your license key, please try again or "
+"contact support. Error code: %s"
+msgstr ""
+
+#: inc/classes/TEST_1_Plugin_Updater.php:185
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" "
+"class=\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+
+#: inc/classes/TEST_1_Plugin_Updater.php:192
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" "
+"class=\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a "
+"href=\"%4$s\">update now</a>."
+msgstr ""
+
+#: inc/classes/TEST_1_Plugin_Updater.php:332
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: inc/classes/TEST_1_Plugin_Updater.php:332
+msgid "Error"
+msgstr ""
+
+#: inc/functions/license.php:71 inc/functions/license.php:107
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "EDD Test2"
 msgstr ""

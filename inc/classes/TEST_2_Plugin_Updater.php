@@ -1,7 +1,7 @@
 <?php
 
 // uncomment this line for testing
-// set_site_transient( 'update_plugins', null );
+//set_site_transient( 'update_plugins', null );
 
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) { exit; }
@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  * Allows plugins to use their own update API.
  *
  * @author Pippin Williamson
- * @version 1.6.1
+ * @version 1.6.3
  */
 class TEST_2_Plugin_Updater {
 	private $api_url   = '';
@@ -30,15 +30,19 @@ class TEST_2_Plugin_Updater {
 	 * @param array   $_api_data    Optional data to send with API calls.
 	 */
 	function __construct( $_api_url, $_plugin_file, $_api_data = null ) {
+
+		global $edd_plugin_data;
+
 		$this->api_url  = trailingslashit( $_api_url );
 		$this->api_data = $_api_data;
 		$this->name     = plugin_basename( $_plugin_file );
 		$this->slug     = basename( $_plugin_file, '.php' );
 		$this->version  = $_api_data['version'];
 
+		$edd_plugin_data[ $this->slug ] = $this->api_data;
+
 		// Set up hooks.
 		$this->init();
-		add_action( 'admin_init', array( $this, 'show_changelog' ) );
 
 	}
 
@@ -50,11 +54,13 @@ class TEST_2_Plugin_Updater {
 	 * @return void
 	 */
 	public function init() {
+
 		add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'check_update' ) );
 		add_filter( 'plugins_api', array( $this, 'plugins_api_filter' ), 10, 3 );
-
 		remove_action( 'after_plugin_row_' . $this->name, 'wp_plugin_update_row', 10, 2 );
 		add_action( 'after_plugin_row_' . $this->name, array( $this, 'show_update_notification' ), 10, 2 );
+		add_action( 'admin_init', array( $this, 'show_changelog' ) );
+
 	}
 
 	/**
@@ -128,9 +134,11 @@ class TEST_2_Plugin_Updater {
 
 		$update_cache = get_site_transient( 'update_plugins' );
 
-		if ( ! is_object( $update_cache ) || empty( $update_cache->response ) || empty( $update_cache->response[ $this->name ] ) ) {
+		$update_cache = is_object( $update_cache ) ? $update_cache : new stdClass();
 
-			$cache_key    = md5( 'edd_plugin_' .sanitize_key( $this->name ) . '_version_info' );
+		if ( empty( $update_cache->response ) || empty( $update_cache->response[ $this->name ] ) ) {
+
+			$cache_key    = md5( 'edd_plugin_' . sanitize_key( $this->name ) . '_version_info' );
 			$version_info = get_transient( $cache_key );
 
 			if ( false === $version_info ) {
@@ -189,6 +197,8 @@ class TEST_2_Plugin_Updater {
 				);
 			}
 
+			do_action( "in_plugin_update_message-{$file}", $plugin, $version_info );
+
 			echo '</div></td></tr>';
 		}
 	}
@@ -223,7 +233,7 @@ class TEST_2_Plugin_Updater {
 			'is_ssl' => is_ssl(),
 			'fields' => array(
 				'banners' => false, // These will be supported soon hopefully
-				'reviews' => false,
+				'reviews' => false
 			)
 		);
 
@@ -273,17 +283,13 @@ class TEST_2_Plugin_Updater {
 			return;
 		}
 
-		if ( empty( $data['license'] ) ) {
-			return;
-		}
-
 		if ( $this->api_url == home_url() ) {
 			return false; // Don't allow a plugin to ping itself
 		}
 
 		$api_params = array(
 			'edd_action' => 'get_version',
-			'license'    => $data['license'],
+			'license'    => ! empty( $data['license'] ) ? $data['license'] : '',
 			'item_name'  => isset( $data['item_name'] ) ? $data['item_name'] : false,
 			'item_id'    => isset( $data['item_id'] ) ? $data['item_id'] : false,
 			'slug'       => $data['slug'],
@@ -308,6 +314,8 @@ class TEST_2_Plugin_Updater {
 
 	public function show_changelog() {
 
+		global $edd_plugin_data;
+
 		if ( empty( $_REQUEST['edd_sl_action'] ) || 'view_plugin_changelog' != $_REQUEST['edd_sl_action'] ) {
 			return;
 		}
@@ -324,10 +332,39 @@ class TEST_2_Plugin_Updater {
 			wp_die( __( 'You do not have permission to install plugin updates', 'test2' ), __( 'Error', 'test2' ), array( 'response' => 403 ) );
 		}
 
-		$response = $this->api_request( 'plugin_latest_version', array( 'slug' => $_REQUEST['slug'] ) );
+		$data         = $edd_plugin_data[ $_REQUEST['slug'] ];
+		$cache_key    = md5( 'edd_plugin_' . sanitize_key( $_REQUEST['plugin'] ) . '_version_info' );
+		$version_info = get_transient( $cache_key );
 
-		if ( $response && isset( $response->sections['changelog'] ) ) {
-			echo '<div style="background:#fff;padding:10px;">' . $response->sections['changelog'] . '</div>';
+		if ( false === $version_info ) {
+
+			$api_params = array(
+				'edd_action' => 'get_version',
+				'item_name'  => isset( $data['item_name'] ) ? $data['item_name'] : false,
+				'item_id'    => isset( $data['item_id'] ) ? $data['item_id'] : false,
+				'slug'       => $_REQUEST['slug'],
+				'author'     => $data['author'],
+				'url'        => home_url()
+			);
+
+			$request = wp_remote_post( $this->api_url, array( 'timeout' => 15, 'sslverify' => false, 'body' => $api_params ) );
+
+			if ( ! is_wp_error( $request ) ) {
+				$version_info = json_decode( wp_remote_retrieve_body( $request ) );
+			}
+
+			if ( ! empty( $version_info ) && isset( $version_info->sections ) ) {
+				$version_info->sections = maybe_unserialize( $version_info->sections );
+			} else {
+				$version_info = false;
+			}
+
+			set_transient( $cache_key, $version_info, 3600 );
+
+		}
+
+		if ( ! empty( $version_info ) && isset( $version_info->sections['changelog'] ) ) {
+			echo '<div style="background:#fff;padding:10px;">' . $version_info->sections['changelog'] . '</div>';
 		}
 
 		exit;

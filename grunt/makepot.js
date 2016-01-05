@@ -3,7 +3,9 @@ module.exports = {
 	target: {
 		options: {
 			domainPath: '<%= pkg.directories.languages %>', // Where to save the POT file.
-				exclude: ['build/.*'],
+				exclude: ['.git/.+',
+				'node_modules/.*',
+				'build/.*'],
 				mainFile: '<%= pkg.pot.src %>', // Main project file.
 				potFilename:  '<%= pkg.pot.textdomain %>' + '.pot', // Name of the POT file.
 				potHeaders: {
@@ -16,7 +18,7 @@ module.exports = {
 				},
 				type: '<%= pkg.pot.type %>', // Type of project (wp-plugin or wp-theme).
 				updateTimestamp: true, // Whether the POT-Creation-Date should be updated without other changes.
-				updatePoFiles: false, // Whether to update PO files in the same directory as the POT file.
+				updatePoFiles: true, // Whether to update PO files in the same directory as the POT file.
 				processPot: function(pot, options) {
 					var translation, // Exclude meta data from pot.
 						excluded_meta = [

@@ -1,0 +1,120 @@
+# Copyright (C) 2016 FX Bénard
+# This file is distributed under the same license as the EDD Test2 package.
+msgid ""
+msgstr ""
+"Project-Id-Version: EDD Test2 1.2\n"
+"Report-Msgid-Bugs-To: https://fxbenard.com/\n"
+"POT-Creation-Date: 2016-01-02 12:20+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-01-05 15:20+0100\n"
+"Language-Team: fxbenard <fx@fxbenard.com>\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
+"esc_html_x:1,2c\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"Last-Translator: FX Bénard <fx@fxbenard.com>\n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/admin/enqueue.php:12
+msgid "License deactivate"
+msgstr "Licence désactivée"
+
+#: inc/admin/options.php:11
+msgid "FX Trads License Options"
+msgstr "FX Trads Options de licence"
+
+#: inc/admin/options.php:11
+msgid "FX Trads"
+msgstr "FX Trads"
+
+#: inc/admin/options.php:26
+msgid "Test-2"
+msgstr "Test-2"
+
+#: inc/admin/options.php:42
+msgid "Enter your license key"
+msgstr "Saisissez votre clé de licence"
+
+#: inc/admin/ui/actions.php:11
+msgid "Activate License"
+msgstr "Activer la licence"
+
+#: inc/admin/ui/actions.php:27
+msgid "License active"
+msgstr "Licence activée"
+
+#: inc/admin/ui/actions.php:28
+msgid "Expires in"
+msgstr "Expire dans"
+
+#: inc/admin/ui/actions.php:28
+msgid "days"
+msgstr "jours"
+
+#: inc/admin/ui/actions.php:29
+msgid "Deactivate License"
+msgstr "Désactiver la licence"
+
+#: inc/admin/ui/notices.php:20 inc/admin/ui/notices.php:61
+msgid "This license does not belong to the product you have entered it for."
+msgstr ""
+"Cette licence ne correspond pas au produit pour lequel vous l’avez saisi."
+
+#: inc/admin/ui/notices.php:25 inc/admin/ui/notices.php:65
+msgid "This license does not have any activations left"
+msgstr "Cette licence n’a plus d'activation disponible"
+
+#: inc/admin/ui/notices.php:30 inc/admin/ui/notices.php:69
+msgid "This license key is expired. Please renew it."
+msgstr "Cette clé de licence est expirée. Veuillez la renouveler."
+
+#: inc/admin/ui/notices.php:73
+msgid ""
+"There was a problem activating your license key, please try again or contact "
+"support. Error code: %s"
+msgstr ""
+"Une erreur s’est produite lors de l’activation de votre clé de licence, "
+"veuillez réessayer ou contactez le support. Code d’erreur : %s"
+
+#: inc/classes/TEST_2_Plugin_Updater.php:177
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Il y a une nouvelle version de %1$s disponible. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Voir les détails de la version %3$s</a>."
+
+#: inc/classes/TEST_2_Plugin_Updater.php:184
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Il y a une nouvelle version de %1$s disponible. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Voir les détails de la version %3$s </a> ou <a "
+"href=\"%4$s\">mettre à jour maintenant.</a>."
+
+#: inc/classes/TEST_2_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+"Vous n’avez pas les droits suffisants pour installer les mises à jour de "
+"l’extension."
+
+#: inc/classes/TEST_2_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Erreur"
+
+#: inc/functions/license.php:66 inc/functions/license.php:103
+msgid "Cheatin&#8217; uh?"
+msgstr "Alors, on triche ?"
+
+#. Description of the plugin/theme
+msgid "EDD Test2"
+msgstr "EDD Test2"

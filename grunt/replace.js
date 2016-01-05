@@ -11,9 +11,6 @@ module.exports = {
         src: [ '<%= pkg.pot.src %>' ],
         overwrite: true,
         replacements: [{
-          from: /define(.*)_VER'.*/,
-          to: "define( '<%= pkg.constant.ver %>' , '<%= pkg.version %>' );"
-        },{
           from: / Version:\s*(.*)/,
           to: " Version: <%= pkg.version %>"
         },{
