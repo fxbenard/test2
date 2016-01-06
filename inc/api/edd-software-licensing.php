@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  * @param (string) $action (activate_license|check_license|delete_license)
  * @param (string)
  */
-function edd_software_call( $action, $key ) {
+function test_2_edd_software_call( $action, $key ) {
 
 	if ( $action == 'check_license' ) {
 		$api_params = array(

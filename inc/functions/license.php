@@ -36,7 +36,7 @@ function test_2_check_license() {
 
     if ( false ===  $license_data ) {
 
-      $license_data = edd_software_call( 'check_license', $license );
+      $license_data = test_2_edd_software_call( 'check_license', $license );
 
 			if ( $license_data->license == 'invalid' ) {
 
@@ -67,11 +67,11 @@ function test_2_activate_license() {
 		$nonce = $_POST['test_2_nonce'];
 
 		// run a quick security check
-		if ( ! wp_verify_nonce( $nonce, 'test-1-nonce' ) ) {
+		if ( ! wp_verify_nonce( $nonce, 'test-2-nonce' ) ) {
 			wp_die( __( 'Cheatin&#8217; uh?', 'test2' ) );
 		}
 
-		$license_data = edd_software_call( 'activate_license', $license );
+		$license_data = test_2_edd_software_call( 'activate_license', $license );
 		update_option( 'test_2_license_status', $license_data->license );
 
 		if ( $license_data->license == 'valid' ) {
@@ -83,7 +83,7 @@ function test_2_activate_license() {
 		} else {
 
 			set_transient( '_test_2_license_error', $license_data->error );
-			echo '<p style="color:red;"><span class="dashicons dashicons-info"></span> '. ajax_notices() .'</p>';
+			echo '<p style="color:red;"><span class="dashicons dashicons-info"></span> '. test_2_ajax_notices() .'</p>';
 
     }
 
@@ -103,11 +103,11 @@ function test_2_deactivate_license() {
 		$nonce = $_POST['test_2_nonce'];
 
 		// run a quick security check
-		if ( ! wp_verify_nonce( $nonce, 'test-1-nonce' ) ) {
+		if ( ! wp_verify_nonce( $nonce, 'test-2-nonce' ) ) {
 			wp_die( __( 'Cheatin&#8217; uh?', 'test2' ) );
 		}
 
-		$license_data = edd_software_call( 'deactivate_license', $license );
+		$license_data = test_2_edd_software_call( 'deactivate_license', $license );
 
 		if ( $license_data->license == 'deactivated' ) {
 

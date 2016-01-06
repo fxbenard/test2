@@ -53,7 +53,7 @@ function test_2_admin_notices() {
  *
  * @since 1.2
  */
-function ajax_notices() {
+function test_2_ajax_notices() {
 
 	$notice = get_transient( '_test_2_license_error' );
 
