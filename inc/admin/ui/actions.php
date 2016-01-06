@@ -8,7 +8,7 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  */
 function test_2_action_add_license() { ?>
 
-	<div style="display:table-cell; vertical-align:middle; width:20%;"><button type="button" id="test_2_license_activate" class="button-secondary"> <?php _e( 'Activate License', 'test2' ); ?></button><span class="spinner"></span></div>
+	<div style="display:table-cell; vertical-align:middle; width:20%;"><button type="button" id="test_2_license_activate" class="button-secondary"> <?php _e( 'Activate License', 'test2' ); ?></button><span id="spinner-test-2" class="spinner"></span></div>
 
 <?php }
 
@@ -26,6 +26,6 @@ function test_2_action_remove_license( $expires ) {
 
 			<div style="display:table-cell; vertical-align:middle; width:20%;"><span style="color: green;" class="dashicons dashicons-yes"></span> <?php _e( 'License active', 'test2' ); ?></div>
 			<div style="display:table-cell; vertical-align:middle; width:20%; margin-left:2%;"><span class="dashicons dashicons-backup"></span> <?php _e('Expires in', 'test2'); ?> : <strong><?php echo $day_before_expires; ?></strong> <?php _e('days', 'test2'); ?></div>
-			<div style="display:table-cell; vertical-align:middle; width:20%; margin-left:2%;"><button type="button" id="test_2_license_deactivate" class="button-secondary"><span style="vertical-align: middle;" class="dashicons dashicons-no"></span> <?php _e( 'Deactivate License', 'test2' ); ?></button><span class="spinner"></span></div>
+			<div style="display:table-cell; vertical-align:middle; width:20%; margin-left:2%;"><button type="button" id="test_2_license_deactivate" class="button-secondary"><span style="vertical-align: middle;" class="dashicons dashicons-no"></span> <?php _e( 'Deactivate License', 'test2' ); ?></button><span id="spinner-test-2" class="spinner"></span></div>
 
 <?php }
